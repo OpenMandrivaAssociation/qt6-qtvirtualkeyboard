@@ -80,7 +80,7 @@ Group: Development/KDE and Qt
 Examples for the Qt %{major} Virtual Keyboard module
 
 %files examples
-%{_qtdir}/examples/virtualkeyboard
+%optional %{_qtdir}/examples/virtualkeyboard
 
 %prep
 %autosetup -p1 -n qtvirtualkeyboard%{!?snapshot:-everywhere-src-%{version}%{?beta:-%{beta}}}
