@@ -1,4 +1,4 @@
-%define beta beta3
+%define beta beta4
 
 Name:		qt6-qtvirtualkeyboard
 Version:	6.4.0
@@ -66,7 +66,20 @@ Qt %{qtmajor} virtual keyboard library
 %{_qtdir}/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbtcimeplugin*.cmake \
 %{_qtdir}/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbthaiplugin*.cmake
 
-%qt6libs VirtualKeyboard
+%global extra_devel_files_HunspellInputMethod \
+%{_qtdir}/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbhunspellplugin*.cmake
+
+%qt6libs VirtualKeyboard HunspellInputMethod
+
+%package examples
+Summary: Examples for the Qt %{major} Virtual Keyboard module
+Group: Development/KDE and Qt
+
+%description examples
+Examples for the Qt %{major} Virtual Keyboard module
+
+%files examples
+%{_qtdir}/examples/virtualkeyboard
 
 %prep
 %autosetup -p1 -n qtvirtualkeyboard%{!?snapshot:-everywhere-src-%{version}%{?beta:-%{beta}}}
