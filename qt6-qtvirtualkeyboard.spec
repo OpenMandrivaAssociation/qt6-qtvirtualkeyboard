@@ -34,6 +34,7 @@ BuildRequires:	cmake(OpenGL)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(vulkan)
+BuildRequires:	pkgconfig(hunspell)
 License:	LGPLv3/GPLv3/GPLv2
 
 %description
