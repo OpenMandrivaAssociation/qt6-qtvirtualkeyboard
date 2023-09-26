@@ -1,4 +1,4 @@
-%define beta beta4
+%define beta rc
 
 Name:		qt6-qtvirtualkeyboard
 Version:	6.6.0
