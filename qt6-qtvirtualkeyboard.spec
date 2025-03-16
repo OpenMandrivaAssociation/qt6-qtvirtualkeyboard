@@ -1,7 +1,7 @@
-#define beta rc2
+%define beta rc
 
 Name:		qt6-qtvirtualkeyboard
-Version:	6.8.2
+Version:	6.9.0
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qtvirtualkeyboard.git
@@ -71,7 +71,10 @@ Qt %{qtmajor} virtual keyboard library
 %global extra_devel_files_HunspellInputMethod \
 %{_qtdir}/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbhunspellplugin*.cmake
 
-%qt6libs VirtualKeyboard HunspellInputMethod VirtualKeyboardSettings
+%global extra_devel_files_VirtualKeyboardQml \
+%{_qtdir}/lib/cmake/Qt6Qml/QmlPlugins/Qt6VirtualKeyboardplugin*.cmake
+
+%qt6libs VirtualKeyboard HunspellInputMethod VirtualKeyboardSettings VirtualKeyboardQml
 
 %package examples
 Summary: Examples for the Qt %{major} Virtual Keyboard module
