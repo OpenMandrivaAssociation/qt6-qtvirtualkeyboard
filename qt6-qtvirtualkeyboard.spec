@@ -1,7 +1,7 @@
 #define beta rc
 
 Name:		qt6-qtvirtualkeyboard
-Version:	6.10.0
+Version:	6.10.1
 Release:	%{?beta:0.%{beta}.}%{?snapshot:0.%{snapshot}.}1
 %if 0%{?snapshot:1}
 # "git archive"-d from "dev" branch of git://code.qt.io/qt/qtvirtualkeyboard.git
@@ -50,9 +50,6 @@ Qt %{qtmajor} virtual keyboard library
 %{_qtdir}/lib/cmake/Qt6/FindCerenceXt9.cmake \
 %{_qtdir}/lib/cmake/Qt6/FindHunspell.cmake \
 %{_qtdir}/lib/cmake/Qt6/FindMyScript.cmake \
-%{_qtdir}/lib/cmake/Qt6BundledOpenwnn \
-%{_qtdir}/lib/cmake/Qt6BundledPinyin \
-%{_qtdir}/lib/cmake/Qt6BundledTcime \
 %{_qtdir}/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPlugin*.cmake \
 %{_qtdir}/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbbuiltinstylesplugin*.cmake \
 %{_qtdir}/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbcomponentsplugin*.cmake \
